@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сайт по макету</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <div class="header">
+    <img class="logo" src="Logo.jpg" alt="Логотип">
+    <div class="site-title">Waves of the Black Sea</div>
+    <div class="menu">
+      <a href="#links">Список гиперссылок </a>
+      <a href="#table">Таблица</a>
+      <a href="#form"> Форма</a>
+    </div>
+  </div>
+
+  <!-- Контент -->
+  <div class="content">
+
+    <!-- Список гиперссылок -->
+    <div class="block"  id="links">
+      <h2>Список гиперссылок</h2>
+      <ul>
+        <li> <a href="http://kubsu.ru"> абсолютная гиперссылка на главную страницу сайта kubsu.ru</a> </li>
+<li> <a href="https://kubsu.ru"> абсолютная на главную сайта kubsu.ru в протоколе https</a> </li>
+<li> <a href="https://kubsu.ru"> <img src="./images/Геленджик.jpg" alt="Родной город - Геленджик"> </a> </li>
+<li> <a href="./hello.html"> сокращенная ссылка на внутреннюю страницу</a> </li>
+<li> <a href="."> сокращенная ссылка на главную страницу</a> </li>
+<li> <a href="#main"> ссылка на фрагмент текущей страницы</a> </li>
+<li> <a href="https://kubsu.ru/search?query=math&sort=date&limit=10"> ссылка с тремя параметрами в URL</a> </li>
+<li> <a href="https://kubsu.ru/profile?id=12345"> ссылка с параметром id в URL</a> </li>
+<li> <a href="./hello.html"> относительная на страницу в текущем каталоге</a> </li>
+<li> <a href="./about/about.html"> относительная на страницу в каталоге about</a> </li>
+<li> <a href="../hello.html"> относительная на страницу в каталоге уровнем выше текущего</a> </li>
+<li> <a href="../../hello.html"> относительная на страницу в каталоге двумя уровнями выше</a> </li>
+<li> а так же вы можете посетить наш <a href="https://kubsu.ru"> полезный сайт</a> </li>
+<li> <a href="https://example.com/article#chapter2"> ссылка на фрагмент страницы стороннего сайта</a> </li>
+<li>
+    <div>
+        <img src="./images/Геленджик.jpg" alt="Родной город - Геленджик" usemap="#imageMap">
+        <map name="imageMap">
+            <area shape="circle" coords="150,150,50" href="https://kubsu.ru" alt="Перейти на сайт КубГУ" title="Главная страница КубГУ">
+            <area shape="rect" coords="10,10,100,100" href="https://kubsu.ru/about" alt="О КубГУ" title="Об университете">
+        </map>
+    </div>
+</li>
+<li> <a href=""> ссылка с пустым href</a> </li>
+<li> <a> ссылка без href</a> </li>
+<li> <a href="https://kubsu.ru" rel="nofollow"> ссылка, по которой запрещен переход поисковикам</a> </li>
+<li> <a href="https://kubsu.ru" rel="noindex"> запрещенная для индексации поисковиками</a> </li>
+<li>
+    <ol>
+        <li> <a href="https://kubsu.ru" title="Главная страница КубГУ"> Главная</a> </li>
+        <li> <a href="https://kubsu.ru/about" title="О университете"> О нас</a> </li>
+        <li> <a href="https://kubsu.ru/admission" title="Информация для абитуриентов"> Поступление</a> </li>
+    </ol>
+</li>
+<li> <a href="ftp://user:password@ftp.example.com/file.txt"> ссылка на файл на сервере FTP с авторизацией</a> </li>
+      </ul>
+    </div>
+
+    <!-- Таблица -->
+    <div class="block" id="table">
+      <h2>Таблица (высота волн)</h2>
+      <table>
+        <tr>
+          <th>27.09</th>
+          <th>28.09</th>
+          <th>29.09</th>
+          <th>30.09</th>
+        </tr>
+        <tr>
+          <td rowspan="2">00:00-4:00 (3.2M)</td>
+          <td>4:00 (2.0M)</td>
+          <td>4:00 (1.6M)</td>
+          <td>4:00 (1.7M)</td>
+        </tr>
+        <tr>
+          <td>8:00 (1.7M)</td>
+          <td>8:00 (1.8M)</td>
+          <td>8:00 (1.5M)</td>
+        </tr>
+        <tr>
+          <td>8:00 (2.5M)</td>
+          <td colspan="2">12:00 (2.2M)</td>
+          <td>12:00 (1.4M)</td>
+        </tr>
+        <tr>
+          <td>15:00 (2M)</td>
+          <td>15:00 (2.4M)</td>
+          <td>15:00 (1.9M)</td>
+          <td>15:00 (1.7M)</td>
+        </tr>
+        <tr>
+          <td>22:00 (1.8M)</td>
+          <td>22:00 (2.8M)</td>
+          <td>22:00 (2.6M)</td>
+          <td>22:00 (1.6M)</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Форма -->
+    <div class="block" id="form">
+      <h2>Форма</h2>
+      <form>
+          <fieldset>
+              <legend> Личная информация</legend>
+
+              <div>
+                  <label for="fio">Ваше ФИО:</label>
+                  <input type="text" id="fio" name="fio"
+                         pattern="[А-Яа-яЁёA-Za-z\s]+"
+                         title="Разрешены только буквы и пробелы"
+                         placeholder="Иванов Иван Иванович"
+                         required>
+              </div>
+
+              <div>
+                  <label for="tel-num"> Ваш номер телефона:</label>
+                  <input type="tel" id="tel-num" name="tel-num" pattern="\d{11}"
+                         title="Введите корректный номер"
+                         placeholder="78009997888"
+                         required>
+              </div>
+
+              <div>
+                  <label for="mail"> Ваш e-mail:</label>
+                  <input type="email" id="mail" name="mail"
+                    placeholder="Sponge.BoB@Garry" required>
+              </div>
+
+              <div>
+                  <label for="date"> Ваша дата рождения:</label>
+                  <input type="date" id="date" name="date" required>
+              </div>
+          </fieldset>
+
+          <fieldset>
+              <legend>Ваш пол:</legend>
+              <div class=" radio-group">
+                  <div class="radio">
+                      <input type="radio" id="male" name="gender" value="male" required>
+                      <label for="male">Мужской</label>
+                  </div>
+                  <div class="radio">
+                      <input type="radio" id="female" name="gender" value="female" required>
+                      <label for="female">Женский</label>
+                  </div>
+              </div>
+
+          </fieldset>
+
+          <fieldset>
+              <legend> Ваш любимый язык программирования:</legend>
+              <select name="prog-lang" id="prog-lang">
+                  <option value="pas"> Pascal</option>
+                  <option value="c"> C</option>
+                  <option value="cpp"> C + + </option>
+                  <option value="js"> JavaScript</option>
+                  <option value="php"> PHP</option>
+                  <option value="py"> Python</option>
+                  <option value="java"> Java</option>
+                  <option value="hask"> Haskel</option>
+                  <option value="clo"> Clojure</option>
+                  <option value="pro"> Prolog</option>
+                  <option value="sca"> Scala</option>
+              </select>
+          </fieldset>
+
+          <fieldset>
+              <legend> Биография</legend>
+              <label for="bio"> О себе:</label>
+              <textarea id="bio" name="bio" rows="5"> </textarea>
+          </fieldset>
+
+          <!-- Заменить текущий блок чекбокса на это -->
+          <div class="checkbox">
+              <label class="checkbox-label">
+                  <input type="checkbox" id="agreement" name="agreement" required>
+                  С контрактом ознакомлен(а)
+              </label>
+          </div>
+
+          <button type="submit"> Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <div class="footer">
+    © Сихиди Янис
+  </div>
+
+</body>
+</html>
