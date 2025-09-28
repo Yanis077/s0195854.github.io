@@ -20,7 +20,7 @@ jobs:
       - name: Copy site files
         run: |
           mkdir public
-          cp -r Web2-up-up/Web2-up/Web2/* public/
+          cp -r Web-up-up/Web-up/Web/* public/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
